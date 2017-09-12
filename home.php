@@ -24,12 +24,13 @@
 			}
 			xmlHttp.open("GET","register.php?name="+str,true);
 			xmlHttp.send();
-	}	
+	}
+
 </script>
 </head>
 <body>
 
-	<nav class="navbar navbar-inverse">
+	<nav class="navbar navbar-default">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -40,10 +41,10 @@
 				<a class="navbar-brand" href="#">Logo</a>
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
-				<ul class="nav navbar-nav">
-					<li class="active"><a href="#">Home</a></li>
-					<li><a href="#">Quiz</a></li>
-					<li><a href="#">Contact</a></li>
+				<ul class="nav navbar-nav nav-tabs">
+					<li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+					<li><a data-toggle="tab" href="#quiz">Quiz</a></li>
+					<li><a data-toggle="tab" href="#contact">Contact</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 				<li><a href="#regModal" data-toggle="modal"><span class="glyphicon glyphicon-user"></span> Register</a></li>
@@ -149,7 +150,8 @@
 				<p><a href="#">Link</a></p>
 				<p><a href="#">Link</a></p>
 			</div>
-			<div class="col-sm-8 text-left">
+			<div class="col-sm-8 text-left tab-content">
+			<div id="home" class="tab-pane fade in active">
 				<div class="page-header text-center"> 
 				<h1>Welcome to Knowledge Portal</h1>
 				</div>
@@ -158,6 +160,13 @@
 				Government exams and will also help in increasing your knowledge.</p>
 				<hr>
 				<p>Why wait? If you are new to this website, Register and start playing.<br>If not, you better know where to start.</p>
+			</div>
+			<div id="quiz" class="tab-pane fade">
+			<p>Find here quizzes</p>
+			</div>
+			<div id="contact" class="tab-pane fade">
+			<p>Contact here</p>
+			</div>
 			</div>
 			<div class="col-sm-2 sidenav">
 				<div class="well">

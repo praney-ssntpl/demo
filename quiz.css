@@ -3,9 +3,20 @@
 	border-radius: 0;
 }
 
+.category {
+	height:200px;
+	width:auto;
+}
+
+.head-tag {	
+	color: rgba(60, 118, 61, 1);
+	font-size:18px;	
+}
+
 .row.content {
 	height: 558px;
 }
+
 
 .sidenav {
 	padding-top: 20px;
