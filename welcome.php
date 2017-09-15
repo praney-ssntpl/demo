@@ -75,10 +75,29 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title">Game</h4>
+						<h4 class="modal-title">Sports</h4>
 					</div>
 					<div class="modal-body">
-						
+						<?php 
+							
+							require_once("connection.php");
+							$offset = 1;
+							$sql = "SELECT * FROM quiz_ques LIMIT $offset";
+							$result = mysqli_query($conn,$sql);
+							
+							if(mysqli_num_rows($result)>0)
+							{
+								while($row = mysqli_fetch_assoc($result))
+								{
+									echo "<table border='solid black 1px'><tr><td>".$row['id']."</td><td>".$row['ques']."</td></tr><tr><td>".$row['opt1']."</td><td>".$row['opt2']."</td></tr><tr><td>".$row['opt3']."</td><td>".$row['opt4']."</td></tr></table><br>";
+								}
+							}
+							mysqli_close($conn);
+						?>
+						<ul class="pager">
+							<li class="previous"><a href="#">Previous</a></li>
+							<li class="next"><a href="#">Next</a></li>
+						</ul>
 					</div>
 					<div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
